@@ -1,0 +1,21 @@
+name: prerelease-app
+run-name: ${{ github.actor }} is building release-app
+on:
+  release:
+    types:
+      - published
+
+jobs:
+  release:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+        # os: [macos-latest, ubuntu-latest, windows-latest]
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - uses: ./.github/actions/dist-builder
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
