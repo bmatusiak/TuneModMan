@@ -9,7 +9,7 @@ module.exports = {
       config: {
         repository: {
           owner: 'bmatusiak',
-          name: 'react-desktop-electron'
+          name: 'TuneModMan'
         },
         draft: true 
       }
