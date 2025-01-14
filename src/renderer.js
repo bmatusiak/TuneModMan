@@ -26,6 +26,12 @@
  * ```
  */
 
-import './index.css';
+import main from './App/index';
 
-console.log('👋 This message is being logged by "renderer.js", included via webpack');
+import rectify from '@bmatusiak/rectify';
+
+(() => {
+    var app = rectify.build(main.config)
+    app.start();
+    main(app.services);
+})();
