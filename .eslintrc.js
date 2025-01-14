@@ -33,7 +33,7 @@ module.exports = {
     ],
     'rules': {
         'quotes': [
-            'warn',
+            'off',
             'single',
             {
                 'allowTemplateLiterals': true
