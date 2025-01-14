@@ -6,6 +6,18 @@ module.exports = {
     asar: true,
   },
   rebuildConfig: {},
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'bmatusiak',
+          name: 'TuneModMan'
+        },
+        draft: true 
+      }
+    }
+  ],
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
