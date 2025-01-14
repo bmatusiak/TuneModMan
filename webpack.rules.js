@@ -44,7 +44,12 @@ module.exports = [
       // Translates CSS into CommonJS
       'css-loader',
       // Compiles Sass to CSS
-      'sass-loader',
+      {
+        loader: "sass-loader",
+        options: {
+          warnRuleAsWarning: false,
+        },
+      },
     ],
   },
   // Put your webpack loader rules in this array.  This is where you would put
